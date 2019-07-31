@@ -14,17 +14,30 @@ export class Home extends React.Component {
 	}
 	render() {
 		return (
-			<div>
-				<h1>Todos</h1>
-				<input id="input1" type="text" />
-				<input type="button" value="Enter" onClick={() => this.add()} />
+			<div className="box1">
+				<h1>My To do List</h1>
+				<input
+					className="input"
+					id="input1"
+					type="text"
+					placeholder="Title..."
+				/>
+				<input
+					className="post"
+					type="button"
+					value="Add"
+					onClick={() => this.add()}
+				/>
 				{this.notes.map((e, i) => {
 					return (
 						<div>
-							<div key={i}>{e}</div>
+							<div className="responce" type="button" key={i}>
+								{e}
+							</div>
 							<input
+								className="deleteNote"
 								type="button"
-								value="delete"
+								value="Delete"
 								onClick={() => {
 									this.notes.splice(i, 1);
 									this.forceUpdate();
