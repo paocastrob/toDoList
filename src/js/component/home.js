@@ -31,7 +31,7 @@ export class Home extends React.Component {
 				{this.notes.map((e, i) => {
 					return (
 						<div>
-							<div className="responce" type="button" key={i}>
+							<div className="response" type="button" key={i}>
 								{e}
 							</div>
 							<input
